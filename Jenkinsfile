@@ -8,5 +8,12 @@ pipeline {
                 sh 'cat hello.txt'
             }
         }
+        stage('Push') {
+            steps {
+                sh 'git add hello.txt'
+                sh 'git commit -m "Create hello.txt"'
+                sh 'git push'
+            }
+        }
     }
 }
