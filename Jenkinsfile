@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'ls -a'
+                sh 'touch hello.txt'
+                sh 'echo "Hello World!" > hello.txt'
+                sh 'cat hello.txt'
             }
         }
     }
