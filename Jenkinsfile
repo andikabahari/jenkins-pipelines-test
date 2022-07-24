@@ -10,10 +10,12 @@ pipeline {
         }
         stage('Push') {
             steps {
-                withCredentials([string(credentialsId: 'github-token', variable: 'token')]) {
-                    sh 'echo "$token" > token.txt'
-                    sh 'cat token.txt'
-                }
+                sh 'curl -i https://api.github.com/repos/andikabahari/jenkins-pipelines-test'
+                
+//                 withCredentials([string(credentialsId: 'github-token', variable: 'token')]) {
+//                     sh 'echo "$token" > token.txt'
+//                     sh 'cat token.txt'
+//                 }
                 
 //                 sh 'git config --global user.email "andikabahari48@gmail.com"'
 //                 sh 'git config --global user.name "Andika Bahari"'
