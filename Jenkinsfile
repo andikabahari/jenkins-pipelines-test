@@ -14,7 +14,7 @@ pipeline {
                 sh 'git config --global user.name "Andika Bahari"'
                 sh 'git add hello.txt'
                 sh 'git commit -m "Create hello.txt"'
-                sh 'git push'
+                sh 'git push origin main'
             }
         }
     }
