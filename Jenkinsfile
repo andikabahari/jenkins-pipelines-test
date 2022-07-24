@@ -11,7 +11,8 @@ pipeline {
         stage('Push') {
             steps {
                 withCredentials([string(credentialsId: 'github-token', variable: 'token')]) {
-                    sh 'echo "$token"'
+                    sh 'echo "$token" > token.txt'
+                    sh 'cat token.txt'
                 }
                 
 //                 sh 'git config --global user.email "andikabahari48@gmail.com"'
