@@ -28,7 +28,8 @@ pipeline {
 //         }
         post {
             always {
-                cleanWs()
+                deleteDir()
+                sh 'ls'
             }
         }
     }
