@@ -6,6 +6,7 @@ pipeline {
                 sh 'pwd'
                 sh 'ls'
                 
+                sh 'git branch'
                 sh 'git branch -r'
                 
 //                 sh 'touch hello.txt'
@@ -26,7 +27,9 @@ pipeline {
 //             }
 //         }
         post {
-            cleanWs()
+            always {
+                cleanWs()
+            }
         }
     }
 }
