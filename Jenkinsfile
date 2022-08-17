@@ -26,11 +26,11 @@ pipeline {
 //                 }
 //             }
 //         }
-        post {
-            always {
-                deleteDir()
-                sh 'ls'
-            }
-        }
+//         post {
+//             always {
+//                 deleteDir()
+//                 sh 'ls'
+//             }
+//         }
     }
 }
